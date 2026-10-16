@@ -137,9 +137,10 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 40px
     </div>
     <div><label for="problem">Biggest problem</label><select id="problem" name="problem" required>
       <option value="">Choose…</option><option value="pulling">Pulling on the lead</option><option value="jumping">Jumping up</option><option value="barking">Barking</option><option value="recall">Recall (coming back)</option><option value="potty">Potty training</option><option value="other">Other</option></select></div>
+    <label style="display:flex;gap:10px;align-items:flex-start;font-weight:500;cursor:pointer"><input type="checkbox" name="consent" value="yes" style="width:auto;margin-top:5px"> Send me the daily 5-minute exercises by email (unsubscribe anytime)</label>
     <p id="err" style="color:#b3261e;margin:0;display:none">Please add your email, your dog's name, age and biggest problem.</p>
     <button class="btn" type="submit">Join the waitlist — it's free</button>
-    <p class="note" style="text-align:center;margin:0">We'll only email you about 5 Minute Dog. No spam.</p>
+    <p class="note" style="text-align:center;margin:0">We'll only email you about 5 Minute Dog. No spam, never sold. Your details are stored in Google Sheets so we can send your exercises — see our <a href="privacy.html">privacy note</a>.</p>
   </form>
   <div class="thanks card" id="thanks" role="status" aria-live="polite">
     <h3 style="font-size:1.6rem;margin:0 0 8px">🎉 You're on the list!</h3>
@@ -147,7 +148,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 40px
   </div>
 </div></section>
 
-<footer>© 2026 5 Minute Dog · Positive-reinforcement dog training, 5 minutes at a time.</footer>
+<footer>© 2026 5 Minute Dog · Positive-reinforcement dog training, 5 minutes at a time. · <a href="privacy.html">Privacy</a></footer>
 
 <script>
 // FORM ENDPOINT: paste the Google Apps Script web app /exec URL here. Empty = localStorage only.
@@ -158,7 +159,7 @@ document.getElementById('wl').addEventListener('submit',function(e){
   document.getElementById('err').style.display=ok?'none':'block';if(!ok)return;
   d.submittedAt=new Date().toISOString();
   try{var k='5md_waitlist',a=JSON.parse(localStorage.getItem(k)||'[]');a.push(d);localStorage.setItem(k,JSON.stringify(a));}catch(x){}
-  if(WEBAPP_URL){var body=new URLSearchParams();['email','whatsapp','delivery','dogName','age','problem'].forEach(function(k){body.append(k,d[k]||'')});
+  if(WEBAPP_URL){var body=new URLSearchParams();['email','whatsapp','delivery','dogName','age','problem','consent'].forEach(function(k){body.append(k,d[k]||'')});
     fetch(WEBAPP_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).catch(function(){});}
   f.style.display='none';var t=document.getElementById('thanks');
   var name=d.dogName.replace(/[<>&]/g,'');
