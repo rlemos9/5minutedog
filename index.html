@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 Minute Dog — One 5-minute training exercise, every morning</title>
+<meta name="description" content="A personalised 5-minute dog training exercise every morning, by email (WhatsApp coming soon). First 7 days free, then from €5/month.">
+<style>
+:root{--bg:#fff8f0;--card:#fff;--ink:#2b2118;--muted:#6b5a4b;--accent:#e8743b;--accent-d:#c95a24;--soft:#fde9d9;--green:#3f8f5a;--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent-d)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:800;font-size:1.2rem;text-decoration:none;color:var(--ink)}.logo span{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:14px 26px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;box-shadow:0 6px 18px rgba(232,116,59,.3);transition:.15s}
+.btn:hover{background:var(--accent-d);transform:translateY(-1px)}
+.btn.sm{padding:9px 18px;font-size:.9rem;box-shadow:none}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:40px 0 70px}
+h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{font-size:1.15rem;color:var(--muted);margin:0 0 26px;max-width:34em}
+.note{font-size:.9rem;color:var(--muted);margin-top:12px}
+.phone{background:var(--card);border-radius:28px;padding:22px;box-shadow:0 20px 50px rgba(80,40,10,.12);border:1px solid #f1dcc8}
+.phone .meta{font-size:.8rem;color:var(--muted)}
+.phone h4{margin:6px 0 8px}.phone p{margin:0;font-size:.93rem}
+.pill{display:inline-block;background:var(--soft);color:var(--accent-d);border-radius:999px;padding:3px 12px;font-size:.8rem;font-weight:700}
+section{padding:60px 0}
+h2{font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 10px;text-align:center}
+.lead{text-align:center;color:var(--muted);margin:0 auto 36px;max-width:36em}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border-radius:var(--r);padding:26px;box-shadow:0 6px 24px rgba(80,40,10,.07)}
+.num{width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:12px}
+.card h3{margin:0 0 6px}.card p{margin:0;color:var(--muted)}
+.sample{background:var(--soft)}
+.ex{max-width:720px;margin:0 auto}
+.ex ol{padding-left:22px}.ex li{margin-bottom:8px}
+.ok{background:#eaf6ee;border-left:4px solid var(--green);border-radius:10px;padding:14px 18px;margin-top:18px}
+.ok h4{margin:0 0 6px;color:var(--green)}.ok ul{margin:0;padding-left:20px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+details{background:var(--card);border-radius:14px;padding:18px 22px;margin:0 auto 12px;max-width:720px;box-shadow:0 4px 14px rgba(80,40,10,.06)}
+summary{font-weight:700;cursor:pointer}details p{margin:10px 0 0;color:var(--muted)}
+form{max-width:620px;margin:0 auto;display:grid;gap:16px}
+label{font-weight:600;font-size:.95rem;display:block;margin-bottom:6px}
+.opt{font-weight:400;color:var(--muted);font-size:.85rem}
+input,select{width:100%;padding:13px 14px;border:1.5px solid #e6cdb6;border-radius:12px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(232,116,59,.18)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.radios{display:flex;gap:12px;flex-wrap:wrap}
+.radios label{display:flex;align-items:center;gap:8px;font-weight:500;background:#fff;border:1.5px solid #e6cdb6;border-radius:12px;padding:11px 14px;margin:0;cursor:pointer;flex:1;min-width:200px}
+.radios input{width:auto}
+.soon{font-size:.72rem;background:var(--soft);color:var(--accent-d);border-radius:999px;padding:2px 8px;font-weight:700}
+.thanks{display:none;max-width:620px;margin:0 auto;text-align:center}
+.thanks.show{display:block}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 40px}
+@media(max-width:760px){.hero,.steps,.row{grid-template-columns:1fr}.hero{padding-top:10px}section{padding:44px 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><a class="logo" href="#">🐾 5 Minute <span>Dog</span></a><a class="btn sm" href="#waitlist">Join the waitlist</a></header>
+
+<div class="hero">
+  <div>
+    <span class="pill">Launching soon · first 7 days free</span>
+    <h1>A better-behaved dog in <em>5 minutes</em> a morning.</h1>
+    <p class="sub">Tell us about your dog and the one thing driving you mad. Every morning you get a single, short training exercise built for them — and the plan adapts every week.</p>
+    <a class="btn" href="#waitlist">Get early access</a>
+    <p class="note">7 days free, then from €5/month. Cancel anytime.</p>
+  </div>
+  <div class="phone" aria-hidden="true">
+    <div class="meta">Today, 7:30 · 5 Minute Dog</div>
+    <h4>Good morning! Today with Biscuit: the 1-step game 🦮</h4>
+    <p>Grab 20 small treats and the lead. Inside, no distractions. One step at a time — reward when the lead is loose. Done in 5 minutes.</p>
+  </div>
+</div>
+</div>
+
+<section id="how"><div class="wrap">
+  <h2>How it works</h2>
+  <p class="lead">No courses to binge. No hour-long sessions. Just one small, doable thing each day.</p>
+  <div class="steps">
+    <div class="card"><div class="num">1</div><h3>Tell us about your dog</h3><p>Name, age, breed and the biggest problem — pulling, jumping, barking, recall, potty or something else.</p></div>
+    <div class="card"><div class="num">2</div><h3>Get one exercise each morning</h3><p>A clear 5-minute exercise by email (WhatsApp coming soon), using positive reinforcement only.</p></div>
+    <div class="card"><div class="num">3</div><h3>Weekly check-in</h3><p>Tell us how it went. Next week's plan gets easier, harder or changes focus to match your dog.</p></div>
+  </div>
+</div></section>
+
+<section class="sample"><div class="wrap"><div class="ex">
+  <h2>What a morning looks like</h2>
+  <p class="lead">A real sample exercise, exactly as it would arrive.</p>
+  <div class="card">
+    <div class="tags"><span class="pill">Loose-leash walking</span><span class="pill">Day 1</span><span class="pill">⏱ 5 min</span></div>
+    <h3>Loose-leash: the 1-step game</h3>
+    <p><strong>You need:</strong> lead, 20 pea-sized treats, a quiet hallway or garden.</p>
+    <ol>
+      <li>Clip on the lead and stand still with your dog beside you. Wait until the lead hangs in a soft "J" shape.</li>
+      <li>Take <strong>one</strong> step forward. If the lead stays loose, say "yes!" and feed a treat right next to your leg.</li>
+      <li>If your dog pulls ahead, simply stop. Don't tug. Wait for them to look back or step towards you — the moment the lead slackens, "yes!" and treat.</li>
+      <li>Repeat one step at a time. After 5 loose steps in a row, try two steps between treats.</li>
+      <li>Stop after 5 minutes, ideally on a success. Finish with a quick game or a sniff.</li>
+    </ol>
+    <div class="ok"><h4>✓ Success looks like</h4><ul>
+      <li>Your dog stays beside you for 5 one-step repetitions in a row.</li>
+      <li>They check in by looking up at you without being asked.</li>
+      <li>If you can't get there today, that's fine — tomorrow starts one step easier.</li>
+    </ul></div>
+  </div>
+</div></div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2><p class="lead">The short answers.</p>
+  <details><summary>Is 5 minutes a day really enough?</summary><p>Short, frequent sessions suit most dogs better than long ones — they stay focused and you actually do it. Each exercise is designed to fit into your morning and be practised in small moments through the day.</p></details>
+  <details><summary>How much does it cost?</summary><p>The first 7 days are free. After that it's from €5/month, and you can cancel anytime. Joining the waitlist costs nothing and doesn't commit you to anything.</p></details>
+  <details><summary>Email or WhatsApp?</summary><p>You choose at signup. Email launches first; WhatsApp is coming soon. If you pick WhatsApp, we'll send your exercises by email until it's ready.</p></details>
+  <details><summary>What training methods do you use?</summary><p>Positive reinforcement only: rewarding what you want to see, not punishing what you don't. No choke chains, no prong collars, no shouting. For aggression or serious anxiety, please also see a qualified behaviourist or your vet.</p></details>
+</div></section>
+
+<section id="waitlist" style="background:var(--soft)"><div class="wrap">
+  <h2>Join the waitlist</h2>
+  <p class="lead">Be first in when we launch. Your first 7 days are free.</p>
+
+  <!-- FORM ENDPOINT: set WEBAPP_URL in the script at the bottom to the Google Apps Script
+       web app URL. Entries are always also kept in localStorage ('5md_waitlist'). -->
+  <form id="wl" novalidate>
+    <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+    <div><label for="wa">WhatsApp number <span class="opt">(optional)</span></label><input id="wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+31 6 12345678"></div>
+    <div><label>How should we send your exercises?</label>
+      <div class="radios">
+        <label><input type="radio" name="delivery" value="email" checked> Email</label>
+        <label><input type="radio" name="delivery" value="whatsapp"> WhatsApp <span class="soon">Coming soon</span></label>
+      </div></div>
+    <div class="row">
+      <div><label for="dog">Dog's name</label><input id="dog" name="dogName" required placeholder="Biscuit"></div>
+      <div><label for="age">Age</label><select id="age" name="age" required>
+        <option value="">Choose…</option><option>Puppy (under 6 months)</option><option>6–12 months</option><option>1–3 years</option><option>4–7 years</option><option>8+ years</option></select></div>
+    </div>
+    <div><label for="problem">Biggest problem</label><select id="problem" name="problem" required>
+      <option value="">Choose…</option><option value="pulling">Pulling on the lead</option><option value="jumping">Jumping up</option><option value="barking">Barking</option><option value="recall">Recall (coming back)</option><option value="potty">Potty training</option><option value="other">Other</option></select></div>
+    <p id="err" style="color:#b3261e;margin:0;display:none">Please add your email, your dog's name, age and biggest problem.</p>
+    <button class="btn" type="submit">Join the waitlist — it's free</button>
+    <p class="note" style="text-align:center;margin:0">We'll only email you about 5 Minute Dog. No spam.</p>
+  </form>
+  <div class="thanks card" id="thanks" role="status" aria-live="polite">
+    <h3 style="font-size:1.6rem;margin:0 0 8px">🎉 You're on the list!</h3>
+    <p id="thanksMsg">We'll be in touch as soon as we launch.</p>
+  </div>
+</div></section>
+
+<footer>© 2026 5 Minute Dog · Positive-reinforcement dog training, 5 minutes at a time.</footer>
+
+<script>
+// FORM ENDPOINT: paste the Google Apps Script web app /exec URL here. Empty = localStorage only.
+const WEBAPP_URL = '';
+document.getElementById('wl').addEventListener('submit',function(e){
+  e.preventDefault();var f=e.target,d=Object.fromEntries(new FormData(f));
+  var ok=/^\S+@\S+\.\S+$/.test(d.email||'')&&d.dogName&&d.age&&d.problem;
+  document.getElementById('err').style.display=ok?'none':'block';if(!ok)return;
+  d.submittedAt=new Date().toISOString();
+  try{var k='5md_waitlist',a=JSON.parse(localStorage.getItem(k)||'[]');a.push(d);localStorage.setItem(k,JSON.stringify(a));}catch(x){}
+  if(WEBAPP_URL){var body=new URLSearchParams();['email','whatsapp','delivery','dogName','age','problem'].forEach(function(k){body.append(k,d[k]||'')});
+    fetch(WEBAPP_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).catch(function(){});}
+  f.style.display='none';var t=document.getElementById('thanks');
+  var name=d.dogName.replace(/[<>&]/g,'');
+  document.getElementById('thanksMsg').textContent='Thanks! We\'ll email you at '+d.email+' when we launch, with '+name+'\'s first exercise.'+(d.delivery==='whatsapp'?' WhatsApp is coming soon — until then, exercises arrive by email.':'');
+  t.classList.add('show');t.scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
