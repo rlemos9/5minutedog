@@ -151,7 +151,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 40px
 
 <script>
 // FORM ENDPOINT: paste the Google Apps Script web app /exec URL here. Empty = localStorage only.
-const WEBAPP_URL = '';
+const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxUwF0BmPLpFlJAlv4GtPljF189QlPRzKyU6r2HqTsDCu9Yq21PPyDb63Uj593Dt37W/exec';
 document.getElementById('wl').addEventListener('submit',function(e){
   e.preventDefault();var f=e.target,d=Object.fromEntries(new FormData(f));
   var ok=/^\S+@\S+\.\S+$/.test(d.email||'')&&d.dogName&&d.age&&d.problem;
