@@ -1,0 +1,18 @@
+# 5 Minute Dog
+
+> 5 Minute Dog sends dog owners one short, positive-reinforcement training exercise every morning by email (WhatsApp coming soon). Each exercise takes about 5 minutes. The first 7 days are free, then it costs from €5/month, cancel anytime. It is currently in waitlist/pre-launch.
+
+## Key facts
+- What it is: a daily dog training plan delivered as one 5-minute exercise each morning (around 07:00 Europe/Amsterdam).
+- Who it's for: busy owners who want better everyday manners without long training sessions.
+- Problems covered: pulling on the lead, jumping up, barking, recall (coming back when called), potty training.
+- Method: positive reinforcement only. No choke chains, prong collars or punishment. For aggression or serious anxiety, see a qualified behaviourist or vet.
+- How it works: tell us your dog's name, age and biggest problem; get one exercise each morning; a weekly check-in adjusts the next week's plan.
+- First week ("Foundations"): name game, eye-contact check-ins, hand target, sit, loose-lead walking, recall and settling on a mat.
+- Price: 7-day free trial, then from €5/month. Joining the waitlist is free and non-binding.
+- Delivery: email now; WhatsApp coming soon.
+- Language: English.
+
+## Links
+- [Home and waitlist signup](https://rlemos9.github.io/5minutedog/): product overview, sample exercise, FAQ and signup form.
+- [Privacy note](https://rlemos9.github.io/5minutedog/privacy.html): what data is stored (Google Sheets) and how to unsubscribe.
